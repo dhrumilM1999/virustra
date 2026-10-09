@@ -36,7 +36,7 @@ npm start                       # serves ./public on http://localhost:5173
 
 ## Deploy (Netlify, from GitHub)
 
-Repo: `github.com/dhrumilM1999/virustra`. Netlify watches `main`; every push publishes `public/` automatically (settings live in `netlify.toml`).
+Repo: `github.com/dhrumilM1999/virustra` · Live: https://virustra.netlify.app (Netlify project `virustra`). Netlify watches `main`; every push publishes `public/` automatically (settings live in `netlify.toml`).
 
 **One-time setup (≈2 minutes, needs your Netlify + GitHub login):**
 1. [app.netlify.com](https://app.netlify.com) → **Add new site → Import an existing project → GitHub** → pick `virustra`.
