@@ -50,13 +50,13 @@ After you have a domain: `npm run set-domain -- https://www.your-domain.com` (up
 
 ## Before launch
 
-- [ ] `public/assets/js/config.js` → set `whatsappNumber` (digits, with country code) and `saleEnds`.
+- [x] WhatsApp number set (`919723300699`). [ ] Set `saleEnds` in `public/assets/js/config.js` to a real end date.
 - [ ] Run `npm run set-domain -- https://…`.
 - [ ] Replace all stock photos in `public/assets/img/photos/` with real Virustra inventory (keep the filenames or update `index.html`).
 - [ ] Replace sample product names/prices (`.card` elements in `index.html`) and the sample offers/banners marked `*`.
 - [ ] Add real policy pages (rental terms, returns, delivery, privacy), business name/GSTIN/address and contact details in the footer.
 - [ ] Add the remaining social links (YouTube/Pinterest) in the footer; Instagram already points to instagram.com/virustra.
-- [ ] Remove the “Concept preview” label (`.concept` in `index.html`).
+- [ ] Remove `noindex` (meta tag in `index.html` + `Disallow: /` in `robots.txt`) so search engines can index the site.
 - [ ] Re-export `og-image.jpg` (1200×630) from a real campaign photo.
 
 ## Customising (built in)

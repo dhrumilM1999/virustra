@@ -26,7 +26,7 @@ No linter, bundler or tests. Verify changes in a browser (XAMPP: `http://localho
 
 ## Rules that affect implementation
 
-**Never invent business facts.** Real prices, stock, sizes, discounts, shipping/return terms, pin-code coverage, phone/email, address, GSTIN and the WhatsApp number are unverified. Everything sample is marked `*` and the "Concept preview" label stays until the business supplies real data. Don't add scarcity/fake-review/fake-stock claims.
+**Never invent business facts.** Real prices, stock, sizes, discounts, shipping/return terms, pin-code coverage, phone/email, address, GSTIN and the WhatsApp number are unverified. The owner chose (2026-10-10) to present sample prices/photos as if real for the client demo, so the "Concept preview" label is gone; the demo stays `noindex` (meta + robots.txt) until real data replaces it — remove noindex at launch. Don't add scarcity/fake-review/fake-stock claims.
 
 **Rent vs buy:** cards label "Rent from" / "Buy from"; a piece without one option shows "Rental only"/"Sale only". Sale items carry `data-sale="<percent>"` and the struck-through "was" price is computed in `shop()`.
 
