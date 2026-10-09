@@ -11,7 +11,8 @@ RewriteRule ^$ public/index.html [L]
 
 # anything that exists inside public/ (assets, 404.html, robots.txt …)
 RewriteCond %{REQUEST_URI} !^/virustra/public/
-RewriteCond %{DOCUMENT_ROOT}/virustra/public/$1 -f
+RewriteCond %{DOCUMENT_ROOT}/virustra/public/$1 -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/virustra/public/$1 -d
 RewriteRule ^(.*)$ public/$1 [L]
 
 ErrorDocument 404 /virustra/public/404.html
