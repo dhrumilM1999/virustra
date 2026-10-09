@@ -746,3 +746,9 @@ Libraries: GSAP 3.12 and ScrollTrigger (cdnjs) plus Lenis smooth scroll (jsDeliv
 - **Categories:** Women / Men / Kids across the nav, hero carousel, shop-by-who panels and product filter.
 - **Footer:** now light, with an atelier photo band and directory columns; the giant wordmark was dropped.
 - **Honesty rule still applies:** all offers, prices and discounts in the demo are samples (marked `*`).
+
+### Revision 1.4 — main = v1 + motion layer (2026-10-10)
+- **Main site** returns to the original v1 design (Cormorant Garamond + Manrope, thread-free, hover occasions list) that the client rated 10/10; the banner/shop version is kept as `/v2/`.
+- **Photography** is now Virustra's own (Instagram grid): garba cholis/ghagras, kids' outfits, groom sherwani, couples, embroidery details. Keep `object-position` near the top for portrait crops.
+- **Brand voice** from the Instagram bio: "Wear Royal, Spend Smart" · "Traditional Outfits on Rent" · "Customized Just for You".
+- **New motion language ("silk pleats"):** page-transition curtain, pleat-strip image reveals, arch→full-bleed pinned scene, Flip quick view, masked line reveals, velocity skew, glare, text roll, sequin burst. Details in README → *The motion layer*.
