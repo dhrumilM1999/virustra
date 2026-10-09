@@ -1,0 +1,17 @@
+{
+  "name": "Virustra",
+  "short_name": "Virustra",
+  "description": "Rent or shop Indian occasionwear for women, men and kids.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1E0508",
+  "theme_color": "#1E0508",
+  "icons": [
+    {
+      "src": "assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
