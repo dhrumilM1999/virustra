@@ -1,0 +1,11 @@
+{
+  "name": "virustra-site",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Virustra — rent or shop Indian occasionwear for women, men and kids. Static site (HTML/CSS/JS + GSAP).",
+  "scripts": {
+    "start": "npx --yes serve public -l 5173",
+    "set-domain": "node scripts/set-domain.mjs"
+  },
+  "engines": { "node": ">=18" }
+}

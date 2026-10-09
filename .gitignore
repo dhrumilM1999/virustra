@@ -1,0 +1,21 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Secrets / local config
+.env
+.env.*
+
+# Claude Code local settings (CLAUDE.md itself IS committed)
+.claude/settings.local.json
+
+# Logs & temp
+*.log
+*.tmp
