@@ -1,0 +1,17 @@
+# Local XAMPP only (Netlify ignores this file — it publishes ./public).
+# Makes http://localhost/virustra/ serve public/ with clean URLs.
+RewriteEngine On
+RewriteBase /virustra/
+
+# never expose git internals
+RewriteRule ^\.git - [R=404,L]
+
+# home page
+RewriteRule ^$ public/index.html [L]
+
+# anything that exists inside public/ (assets, 404.html, robots.txt …)
+RewriteCond %{REQUEST_URI} !^/virustra/public/
+RewriteCond %{DOCUMENT_ROOT}/virustra/public/$1 -f
+RewriteRule ^(.*)$ public/$1 [L]
+
+ErrorDocument 404 /virustra/public/404.html
