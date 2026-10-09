@@ -69,7 +69,6 @@ body::after{content:"";position:fixed;inset:-50%;z-index:9500;pointer-events:non
 .spine{position:fixed;right:clamp(.5rem,1.4vw,1.4rem);top:22vh;height:56vh;width:1px;background:rgba(218,175,135,.28);z-index:90;mix-blend-mode:normal}
 .spine i{position:absolute;inset:0;background:var(--gold);transform-origin:top;transform:scaleY(0)}
 .spine b{position:absolute;left:50%;top:0;width:9px;height:9px;margin:-4px 0 0 -4px;border-radius:50%;background:var(--gold-light);box-shadow:0 0 0 4px rgba(218,175,135,.2)}
-.concept{position:fixed;left:4.9rem;bottom:1.3rem;z-index:95;padding:.45rem .8rem;border-radius:99px;background:rgba(30,5,8,.82);backdrop-filter:blur(8px);color:var(--gold);font-size:.6875rem;letter-spacing:.08em;border:1px solid rgba(218,175,135,.3)}
 
 /* announcement bar */
 .bar{position:absolute;top:0;left:0;right:0;z-index:101;height:var(--bar);background:var(--sale-bar);color:#fff;display:flex;align-items:center;justify-content:center;gap:1rem;font-family:var(--font-foot);font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;overflow:hidden}
@@ -136,7 +135,7 @@ body::after{content:"";position:fixed;inset:-50%;z-index:9500;pointer-events:non
 .wa-float:hover{transform:scale(1.1)}
 .wa-float svg{width:1.6rem;height:1.6rem}
 
-@media(max-width:560px){.concept{display:none}}
+@media(max-width:560px){}
 
 /* hero */
 .dark{background:var(--night);color:var(--ivory)}
