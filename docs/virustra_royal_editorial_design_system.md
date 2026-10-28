@@ -752,3 +752,8 @@ Libraries: GSAP 3.12 and ScrollTrigger (cdnjs) plus Lenis smooth scroll (jsDeliv
 - **Photography** is now Virustra's own (Instagram grid): garba cholis/ghagras, kids' outfits, groom sherwani, couples, embroidery details. Keep `object-position` near the top for portrait crops.
 - **Brand voice** from the Instagram bio: "Wear Royal, Spend Smart" · "Traditional Outfits on Rent" · "Customized Just for You".
 - **New motion language ("silk pleats"):** page-transition curtain, pleat-strip image reveals, arch→full-bleed pinned scene, Flip quick view, masked line reveals, velocity skew, glare, text roll, sequin burst. Details in README → *The motion layer*.
+
+### Revision 1.5 — v3 type system + 3D studio (2026-10-28)
+- Fluid modular type scale, variable Cormorant Garamond (wght 300–700) + Manrope; display tracking −0.024em, balanced headings, pretty paragraphs, tabular lining numerals for prices, drop cap on the story copy.
+- Kinetic typography: weight swell under the pointer, scroll-linked heading weight, outlined marquee bands.
+- 3D type studio: extruded Cormorant/Bodoni/Montserrat lettering and the Devanagari logo in gold, rose-gold, silver, wine velvet or ivory — a way to review how the lettering reads in the round.

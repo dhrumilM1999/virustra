@@ -9,6 +9,7 @@ Traditional outfits **on rent**, customised just for you — *Wear royal, spend 
 | URL | What | Where |
 |---|---|---|
 | `/` | **Main** — the original v1 design plus the advanced motion layer, real Instagram photos | `public/index.html` |
+| `/v3/` | **Next candidate** — main + world-class type system, more motion, and a live **3D type studio** (extruded gold lettering, drag to rotate) | `public/v3/index.html` |
 | `/v2/` | **Backup** — banner-carousel version with Women/Men/Kids filters, sale pricing, customise panel, light footer | `public/v2/index.html` |
 | — | Pristine original v1 (before the motion layer) | `archive/index-v1.html` |
 
@@ -18,6 +19,7 @@ Traditional outfits **on rent**, customised just for you — *Wear royal, spend 
 public/                     ← the deployable site (publish this folder)
   index.html                main page
   v2/index.html             backup version (shares /assets)
+  v3/index.html             v3: main + type system + 3D studio
   404.html  robots.txt  sitemap.xml  site.webmanifest  .nojekyll
   assets/
     css/main.css            base styles (from v1)
@@ -26,6 +28,9 @@ public/                     ← the deployable site (publish this folder)
     js/main.js              base behaviour (loader, hero, filters, WhatsApp builder, scroll reveals)
     js/fx.js                advanced motion layer (loads last; safe to remove)
     js/v2.js  css/v2.css    the backup version's code
+    css/v3.css js/v3.js     v3 only: typography system, kinetic type, sheets, spotlight, weight wave
+    js/studio.js            v3 only: 3D type studio (ES module, lazy-loads three.js)
+    vendor/three/  vendor/opentype.min.js  vendor/fonts/*.ttf    3D studio dependencies (three r170, opentype.js, Cormorant/Bodoni/Montserrat TTF)
     vendor/gsap-3.13/       gsap, ScrollTrigger, Flip, SplitText   vendor/lenis.min.js   vendor/gsap.min.js (3.12, used by /v2/)
     img/ig/                 Virustra photography from Instagram    img/photos/  stock used only by /v2/
     img/                    logo.svg, favicon.svg, og-image.jpg
@@ -52,6 +57,13 @@ CLAUDE.md                   guidance for Claude Code sessions
 | Loader counter | 00 → 100 tied to the stitching ring. |
 
 Everything respects `prefers-reduced-motion` (pinned scene, curtain, skew etc. are skipped; quick view still works without animation).
+
+## v3: typography + 3D type studio
+
+- **Type system** (`v3.css`): fluid modular scale (`--step--1 … --step-6`), variable Cormorant Garamond + Manrope, balanced/pretty line breaking, tabular lining numerals for prices, drop cap, optical tracking. Headings use `font-weight: var(--wg)` so the weight can animate.
+- **Typographic motion** (`v3.js`): hero letters swell in weight under the pointer (variable-font axis); headings thicken as they arrive; two outlined kinetic type bands whose speed follows scroll; sections slide over each other like sheets; gold spotlight on dark sections; 3D tilt on the hero arch; back-to-top progress ring.
+- **3D type studio** (`studio.js`): real font outlines (opentype.js) and the Devanagari logo extruded in three.js and lit by a studio environment. Controls: your text, five typefaces, five finishes (antique gold, rose-gold, silver, wine velvet, ivory), depth, auto-sway, save as PNG. Drag to rotate. Three.js (~700 KB) loads lazily only when the section nears the viewport; no WebGL → a friendly message. It is a lettering preview only — it does not price or order anything.
+- To promote v3 to the main page, copy `public/v3/index.html` over `public/index.html`, fix the `../assets/` paths back to `assets/`, and keep `/v2/` + `archive/` as backups.
 
 ## Run locally
 

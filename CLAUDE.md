@@ -18,6 +18,7 @@ No linter, bundler or tests. Verify changes in a browser (XAMPP: `http://localho
 
 - **Main = `public/index.html`**: the *original v1 design the client rated 10/10* + the advanced motion layer (`fx.js`/`fx.css`) + Instagram photography. Fonts Cormorant Garamond + Manrope. **Do not add the v2 features to it unless asked** (banners, Women/Men/Kids filters, sale, customise panel, light footer) — the owner chose "pure v1 + new animation".
 - **Backup = `public/v2/index.html`** (code in `assets/css/v2.css`, `assets/js/v2.js`; stock images in `assets/img/photos/`; GSAP 3.12 in `assets/vendor/`). Served at `/v2/`, noindex.
+- **`public/v3/index.html`** (`/v3/`) = main + typography system + extra motion + **3D type studio** (`assets/css/v3.css`, `assets/js/v3.js`, `assets/js/studio.js`, vendor `three/`, `opentype.min.js`, `fonts/*.ttf`). Built from the main page; not yet promoted. `studio.js` is an ES module (importmap maps `three`), lazy-loads three.js via IntersectionObserver, extrudes opentype.js outlines + the logo SVG; exposes `window.__studio` for debugging. v3 keeps all main rules (no cursor trail, GSAP-only motion, reduced-motion fallbacks).
 - **`archive/index-v1.html`** = pristine original v1 (not deployed).
 
 ## Layout (main)
