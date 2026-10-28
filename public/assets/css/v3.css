@@ -1,0 +1,105 @@
+/* Virustra v3 — world-class typography, kinetic type, 3D type studio, extra motion.
+   Loads after main.css + fx.css (only used by /v3/). */
+
+/* =====================  TYPOGRAPHY SYSTEM  ===================== */
+:root{
+  /* fluid modular scale (ratio ≈ 1.25 → 1.333 as the screen grows) */
+  --step--1:clamp(.78rem,.76rem + .1vw,.875rem);
+  --step-0:clamp(1rem,.96rem + .2vw,1.125rem);
+  --step-1:clamp(1.25rem,1.15rem + .5vw,1.5rem);
+  --step-2:clamp(1.55rem,1.3rem + 1.1vw,2.2rem);
+  --step-3:clamp(1.95rem,1.5rem + 2vw,3.1rem);
+  --step-4:clamp(2.45rem,1.6rem + 3.6vw,4.6rem);
+  --step-5:clamp(3rem,1.7rem + 5.8vw,6.8rem);
+  --step-6:clamp(3.4rem,1.2rem + 8.4vw,9.2rem);
+  --wg:500;
+}
+html{font-kerning:normal;text-rendering:optimizeLegibility}
+body{font-size:var(--step-0);line-height:1.68;font-feature-settings:"kern","liga","calt";font-variant-ligatures:common-ligatures contextual;hanging-punctuation:first allow-end}
+p{text-wrap:pretty;max-width:68ch}
+.sec-head p,.hero .lede,.story-side p{max-width:34rem}
+
+/* display: variable weight, optical tracking, balanced lines */
+.display,h1,h2,h3{font-weight:var(--wg,500);font-feature-settings:"kern","liga","dlig","onum";letter-spacing:-.024em;line-height:1.02;text-wrap:balance;font-optical-sizing:auto}
+.display em,h1 em,h2 em{font-weight:calc(var(--wg,500) - 60);letter-spacing:-.018em}
+.hero h1{font-size:var(--step-6);line-height:.94;letter-spacing:-.03em}
+.sec-head h2,.enq-form h2{font-size:clamp(2.6rem,1.4rem + 4.6vw,5.4rem);line-height:.98}
+.story h2{font-size:clamp(2rem,1.2rem + 3.3vw,4.2rem);line-height:1.1;letter-spacing:-.02em}
+.rv-copy h2{font-size:var(--step-5)}
+.card h3,.step h3{font-size:var(--step-2);letter-spacing:-.015em}
+summary{font-size:var(--step-1);font-weight:var(--wg,500)}
+
+/* labels: small caps rhythm */
+.eyebrow,label,.card-tag,.state{font-feature-settings:"case","kern";font-variant-numeric:lining-nums}
+.eyebrow{letter-spacing:.34em;font-weight:700}
+
+/* numerals: prices & counters behave like a ledger */
+.pval,.loader-count,.occ-list .n,.ch-n,.qv-prices b{font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum","tnum"}
+.pval{letter-spacing:.01em}
+
+/* drop cap on the first line of the story's supporting copy */
+.story-side p::first-letter{float:left;font:500 3.6em/.82 var(--font-display);padding:.06em .1em 0 0;color:var(--wine)}
+
+/* pull quote used by the type studio */
+.pullquote{font:italic 500 var(--step-3)/1.15 var(--font-display);letter-spacing:-.02em;color:var(--gold-light);text-wrap:balance;max-width:20ch}
+
+/* =====================  SPOTLIGHT ON DARK SECTIONS  ===================== */
+.spot{position:relative}
+.spot::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(520px circle at var(--mx,70%) var(--my,30%),rgba(218,175,135,.13),transparent 62%);opacity:var(--spot,0);transition:opacity .6s}
+.spot>*{position:relative;z-index:1}
+.spot:hover{--spot:1}
+
+/* =====================  SHEET STACKING  ===================== */
+.sheet{position:relative;z-index:3;margin-top:-2.6rem;border-radius:2.6rem 2.6rem 0 0;box-shadow:0 -28px 60px rgba(30,5,8,.16)}
+.how.sheet{overflow:hidden}
+
+/* =====================  KINETIC TYPE BAND  ===================== */
+.kband{background:var(--night);overflow:hidden;padding:clamp(1.6rem,4vw,3.4rem) 0;border-block:1px solid rgba(218,175,135,.22);position:relative}
+.krow{display:flex;width:max-content;white-space:nowrap;will-change:transform}
+.krow+.krow{margin-top:.4rem}
+.krow span{font:italic 400 clamp(4rem,11vw,11rem)/1.02 var(--font-display);padding-right:clamp(2rem,4vw,4rem);color:transparent;-webkit-text-stroke:1px rgba(218,175,135,.6);transition:color .5s,-webkit-text-stroke-color .5s}
+.krow span.f{color:var(--gold);-webkit-text-stroke:0}
+.krow.s span{font-size:clamp(2rem,5vw,5rem);-webkit-text-stroke-color:rgba(240,213,180,.4)}
+.krow.s span.f{color:var(--wine);-webkit-text-stroke:1px rgba(218,175,135,.4)}
+.krow span:hover{color:var(--gold-light)}
+
+/* =====================  3D TYPE STUDIO  ===================== */
+.studio{background:var(--night);color:var(--ivory);padding:var(--section) 0;overflow:hidden}
+.studio .sec-head p{color:rgba(247,240,230,.72)}
+.studio-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(1.2rem,3vw,2.6rem);align-items:stretch}
+.studio-stage{position:relative;min-width:0;width:100%;height:clamp(21rem,44vw,35rem);border:1px solid rgba(218,175,135,.3);border-radius:4px;overflow:hidden;cursor:grab;touch-action:pan-y;background:radial-gradient(70% 80% at 50% 42%,#4a0a14 0%,#2a070c 55%,#14030a 100%)}
+.studio-stage.drag{cursor:grabbing}
+.studio-stage::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 90% at 50% 120%,rgba(0,0,0,.55),transparent 55%)}
+#studio-canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.studio-hint{position:absolute;left:1rem;bottom:.9rem;z-index:2;font:600 .625rem var(--font-body);letter-spacing:.28em;text-transform:uppercase;color:var(--gold);pointer-events:none;opacity:.85}
+.studio-load{position:absolute;inset:0;z-index:2;display:grid;place-items:center;font:600 .6875rem var(--font-body);letter-spacing:.3em;text-transform:uppercase;color:var(--gold);transition:opacity .6s}
+.studio-load.done{opacity:0;pointer-events:none}
+.studio-fallback{position:absolute;inset:0;z-index:3;display:grid;place-items:center;padding:2rem;text-align:center;color:rgba(247,240,230,.8)}
+.studio-fallback[hidden]{display:none}
+.studio-ui{display:grid;align-content:start;gap:1.3rem}
+.studio-ui fieldset{border:0;display:grid;gap:.5rem}
+.studio-ui legend,.studio-ui label.l{font:700 .625rem var(--font-body);letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:.35rem;padding:0}
+.studio-ui input[type=text]{width:100%;min-height:3.2rem;padding:.6rem 1rem;border:1px solid rgba(218,175,135,.4);border-radius:2px;background:rgba(255,255,255,.05);color:var(--ivory);font:italic 500 1.6rem/1.2 var(--font-display)}
+.studio-ui input[type=text]:disabled{opacity:.4}
+.studio-ui input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.chip{padding:.55rem .9rem;border:1px solid rgba(218,175,135,.4);border-radius:99px;font:600 .75rem var(--font-body);letter-spacing:.06em;color:var(--ivory);background:transparent;transition:background .3s,color .3s,border-color .3s}
+.chip:hover{border-color:var(--gold)}
+.chip[aria-pressed=true]{background:var(--gold);color:var(--night);border-color:var(--gold)}
+.chip .sw{display:inline-block;width:.7rem;height:.7rem;border-radius:50%;margin-right:.45rem;vertical-align:-.05rem;border:1px solid rgba(0,0,0,.25)}
+.studio-ui input[type=range]{width:100%;accent-color:var(--gold)}
+.studio-row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.studio-ui .btn{min-height:2.8rem;padding:.6rem 1.2rem;font-size:.75rem}
+.studio-ui small{color:rgba(247,240,230,.6);font-size:.75rem;line-height:1.5}
+@media(max-width:1000px){.studio-grid{grid-template-columns:1fr}.studio-stage{height:clamp(19rem,62vw,30rem)}}
+
+/* =====================  BACK-TO-TOP PROGRESS RING  ===================== */
+.totop{position:fixed;right:1.1rem;bottom:1.1rem;z-index:96;width:3.2rem;height:3.2rem;border-radius:50%;display:grid;place-items:center;background:rgba(30,5,8,.82);backdrop-filter:blur(8px);color:var(--gold);font-size:1.05rem;opacity:0;transform:translateY(12px) scale(.9);pointer-events:none;transition:opacity .4s,transform .5s var(--ease-out)}
+.totop.on{opacity:1;transform:none;pointer-events:auto}
+.totop svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+.totop circle{fill:none;stroke-width:1.6}
+.totop .trk{stroke:rgba(218,175,135,.25)}
+.totop .prog{stroke:var(--gold);stroke-linecap:round;stroke-dasharray:132;stroke-dashoffset:132}
+.totop:hover{color:var(--gold-light)}
+
+@media(prefers-reduced-motion:reduce){.spot::before{transition:none}}
