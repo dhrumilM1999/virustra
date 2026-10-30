@@ -58,7 +58,9 @@ CLAUDE.md                   guidance for Claude Code sessions
 
 Everything respects `prefers-reduced-motion` (pinned scene, curtain, skew etc. are skipped; quick view still works without animation).
 
-## v3: typography + 3D type studio
+## v3: typography + motion (3D studio section removed 2026-10-30)
+
+> The "The wordmark, in the round." 3D studio section was taken off the v3 page. Its files (`js/studio.js`, `vendor/three/`, `vendor/opentype.min.js`, `vendor/fonts/`) are still in the repo, unused, so it can be added back.
 
 - **Type system** (`v3.css`): fluid modular scale (`--step--1 … --step-6`), variable Cormorant Garamond + Manrope, balanced/pretty line breaking, tabular lining numerals for prices, drop cap, optical tracking. Headings use `font-weight: var(--wg)` so the weight can animate.
 - **Typographic motion** (`v3.js`): hero letters swell in weight under the pointer (variable-font axis); headings thicken as they arrive; two outlined kinetic type bands whose speed follows scroll; sections slide over each other like sheets; gold spotlight on dark sections; 3D tilt on the hero arch; back-to-top progress ring.
