@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Virustra — Wear Royal, Spend Smart · v3 with 3D type studio</title>
+<title>Virustra — Wear Royal, Spend Smart · v3</title>
 <meta name="description" content="Traditional outfits on rent, customised just for you. Garba cholis, ghagras and occasionwear for weddings, festivals and engagements — Virustra. Enquire on WhatsApp.">
 <meta name="theme-color" content="#1E0508">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
@@ -56,7 +56,6 @@
       <li><a href="#occasions">Occasions</a></li>
       <li><a href="#how">How it works</a></li>
       <li><a href="#story">Our story</a></li>
-      <li><a href="#studio">3D studio</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul></nav>
     <a class="btn" href="#enquire" data-magnetic>Enquire on WhatsApp</a>
@@ -64,7 +63,7 @@
   </div>
 </header>
 <div class="menu" id="menu">
-  <a href="#collection">Collection</a><a href="#occasions">Occasions</a><a href="#how">How it works</a><a href="#story">Our story</a><a href="#studio">3D studio</a><a href="#enquire">Enquire</a>
+  <a href="#collection">Collection</a><a href="#occasions">Occasions</a><a href="#how">How it works</a><a href="#story">Our story</a><a href="#enquire">Enquire</a>
 </div>
 
 <main id="top">
@@ -200,41 +199,6 @@
   <div class="krow s"><span>Traditional outfits on rent</span><span class="f">✦</span><span>Customised just for you</span><span class="f">✦</span><span>Traditional outfits on rent</span><span class="f">✦</span><span>Customised just for you</span><span class="f">✦</span></div>
 </div>
 
-<!-- 3D TYPE STUDIO -->
-<section class="studio" id="studio" aria-label="3D type studio">
-  <div class="wrap">
-    <div class="sec-head"><div><p class="eyebrow on-dark">Type studio</p><h2 class="display">The wordmark, <em>in the round.</em></h2></div><p>Drag to turn it. Try our typefaces and finishes — a live 3D preview of how Virustra lettering looks, from every angle.</p></div>
-    <div class="studio-grid">
-      <div class="studio-stage">
-        <canvas id="studio-canvas" role="img" aria-label="3D preview of the word Virustra in antique gold"></canvas>
-        <div class="studio-load">Loading 3D…</div>
-        <div class="studio-fallback" hidden><p>The 3D preview needs WebGL, which this browser doesn’t seem to support. The rest of the site works as usual.</p></div>
-        <p class="studio-hint">Drag to rotate · scroll to tilt</p>
-      </div>
-      <form class="studio-ui" onsubmit="return false">
-        <div><label class="l" for="st-text">Your text</label><input id="st-text" type="text" value="Virustra" maxlength="14" autocomplete="off" spellcheck="false"></div>
-        <fieldset><legend>Typeface</legend><div class="chips">
-          <button class="chip" type="button" data-font="cormorant-i" aria-pressed="true">Cormorant Italic</button>
-          <button class="chip" type="button" data-font="cormorant" aria-pressed="false">Cormorant</button>
-          <button class="chip" type="button" data-font="bodoni" aria-pressed="false">Bodoni</button>
-          <button class="chip" type="button" data-font="montserrat" aria-pressed="false">Montserrat</button>
-          <button class="chip" type="button" data-font="logo" aria-pressed="false">Devanagari logo</button>
-        </div></fieldset>
-        <fieldset><legend>Finish</legend><div class="chips">
-          <button class="chip" type="button" data-mat="gold" aria-pressed="true"><i class="sw" style="background:#d4af6a"></i>Antique gold</button>
-          <button class="chip" type="button" data-mat="rose" aria-pressed="false"><i class="sw" style="background:#daaf87"></i>Rose-gold</button>
-          <button class="chip" type="button" data-mat="silver" aria-pressed="false"><i class="sw" style="background:#e6e7ec"></i>Silver</button>
-          <button class="chip" type="button" data-mat="wine" aria-pressed="false"><i class="sw" style="background:#650d17"></i>Wine velvet</button>
-          <button class="chip" type="button" data-mat="ivory" aria-pressed="false"><i class="sw" style="background:#f7f0e6"></i>Ivory</button>
-        </div></fieldset>
-        <div><label class="l" for="st-depth">Depth</label><input id="st-depth" type="range" min=".1" max=".8" step=".05" value=".35"></div>
-        <div class="studio-row"><button class="chip" id="st-auto" type="button" aria-pressed="true">Auto-sway: on</button><button class="btn ghost" id="st-save" type="button">Save as PNG</button></div>
-        <small>A preview of our lettering only — it doesn’t order or price anything.</small>
-      </form>
-    </div>
-  </div>
-</section>
-
 <!-- HOW IT WORKS -->
 <section class="how sheet" id="how">
   <div class="wrap">
@@ -335,7 +299,5 @@
 <script src="../assets/js/main.js"></script>
 <script src="../assets/js/fx.js"></script>
 <script src="../assets/js/v3.js"></script>
-<script type="importmap">{"imports":{"three":"../assets/vendor/three/three.module.min.js"}}</script>
-<script type="module" src="../assets/js/studio.js"></script>
 </body>
 </html>
